@@ -1,0 +1,56 @@
+{
+  "project_id": "demo-papertok-authorship",
+  "paper": {
+    "title": "PaperTok: Exploring the Use of Generative AI for Creating Short-form Videos for Research Communication",
+    "source": "https://arxiv.org/html/2601.18218",
+    "evidence_ids": ["ev-paper-01"]
+  },
+  "research_cards": [{
+    "id": "rc-01", "claim_type": "supported_claim", "evidence_id": "ev-paper-01",
+    "source_locator": "PaperTok section 6.3 (researcher concerns about authorship and contribution); confirm specific passage before public release",
+    "uncertainty": "This demo paraphrases a qualitative finding, not a universal or quantitative claim.",
+    "interest_angle": "为什么一部备受夸赞的 AI 视频，会让创作者难以写下自己的名字？"
+  }],
+  "seed": {
+    "id": "seed-01", "research_card_ids": ["rc-01"], "core_question_id": "cq-01",
+    "character_goal": "一位年轻研究者想为自己的作品公开署名",
+    "obstacle": "整个作品几乎由 AI 自动完成，她不确定自己的贡献是否值得署名",
+    "choice": "在获奖场合选择如何说明自己与 AI 的关系"
+  },
+  "core_question": {"id": "cq-01", "question": "当 AI 完成大部分创作时，谁有资格被称为创作者？"},
+  "style_options": [
+    {"id": "st-01", "core_question_id": "cq-01", "world": "现代职场", "genre": "心理轻悬疑", "dramatic_engine": "公开选择困境", "visual_mode": "真人电影感", "hook": "全公司为她庆祝获奖，她却不敢点击署名确认。", "premise": "一名年轻研究者凭 AI 作品入围创作奖，在领奖前必须解释真正的创作贡献。", "why_fit": "以公众认可和自我怀疑形成直观的选择冲突。"},
+    {"id": "st-02", "core_question_id": "cq-01", "world": "架空古代", "genre": "荒诞喜剧", "dramatic_engine": "身份错位与误会", "visual_mode": "2D 漫剧", "hook": "皇榜宣布了状元，真正写出文章的却是一支神笔。", "premise": "寒门书生捡到神笔，人人夸他才华横溢，直到神笔当众要求记功。", "why_fit": "将 AI 创作贡献问题置入高度夸张的署名关系。"},
+    {"id": "st-03", "core_question_id": "cq-01", "world": "近未来城市", "genre": "法庭推理", "dramatic_engine": "证据揭示", "visual_mode": "风格化 3D", "hook": "机器人把自己的名字写在法庭原告栏。", "premise": "机器人要求分享一部获奖影片的创作者身份，律师逐步揭示人类和机器各自完成了什么。", "why_fit": "通过证据分层呈现‘贡献’与‘身份’的不同定义。"}
+  ],
+  "selection": {"selected_style_id": "st-01"},
+  "story_bible": {
+    "selected_style_id": "st-01",
+    "logline": "一名年轻研究者因 AI 制作的视频获得表彰，却被迫在公开领奖之前说明自己真正做了什么。",
+    "beats": [
+      {"id": "b-01", "action": "手机弹出领奖通知，研究者高兴地起身。", "consequence": "必须填写署名表", "knowledge_state": "观众尚不知道她为何犹豫；研究者知道作品高度依赖 AI。"},
+      {"id": "b-02", "action": "她打开奖项表格，手停在姓名输入框前。", "consequence": "她意识到署名是公开选择，而不仅是一个字段。", "knowledge_state": "观众知道作品和 AI 有关，但仍不知她的具体贡献。"},
+      {"id": "b-03", "action": "她向同事解释自己选题并审查内容，其他画面由 AI 制作。", "consequence": "同事反问创作贡献的边界。", "knowledge_state": "观众和角色都知道人类贡献是策划与审核。"}
+    ]
+  },
+  "screenplay": {
+    "scenes": [
+      {"id": "sc-01", "location_id": "loc-01", "character_ids": ["ch-01"], "what_changes": "从期待领奖转为犹豫署名", "action": "女生收到通知，笑容刚出现便停顿，缓缓看向署名栏。", "dialogue": [{"speaker_id": "ch-01", "line": "这……真能算是我做的吗？"}]},
+      {"id": "sc-02", "location_id": "loc-01", "character_ids": ["ch-01", "ch-02"], "what_changes": "将‘我做了多少’转为‘怎样描述创作贡献’", "action": "同事靠近屏幕，女生指向作品创建记录。", "dialogue": [{"speaker_id": "ch-02", "line": "那你觉得，创作者一定得亲手做每一个镜头吗？"}]}
+    ]
+  },
+  "assets": {
+    "characters": [{"id": "ch-01", "look": "二十多岁女研究者，灰蓝衬衫，短发", "voice": "自然、略显犹豫"}, {"id": "ch-02", "look": "同龄同事，休闲衬衫", "voice": "轻松但好奇"}],
+    "locations": [{"id": "loc-01", "description": "现代研究团队办公室，木色桌面，电脑显示器，自然窗光"}]
+  },
+  "shots": [
+    {"id": "sh-01", "scene_id": "sc-01", "location_id": "loc-01", "character_ids": ["ch-01"], "purpose": "用喜悦到犹豫的反差形成开场钩子", "start_state": "女生盯着电脑、面带笑容", "visible_action": "她读到一行字，手指停在键盘上，笑容消失", "end_state": "眼神凝固在屏幕", "duration_s": 6, "camera": "中近景慢推"},
+    {"id": "sh-02", "scene_id": "sc-02", "location_id": "loc-01", "character_ids": ["ch-01", "ch-02"], "purpose": "把内部犹豫转化为人物冲突", "start_state": "女研究者坐着，同事站在右侧", "visible_action": "同事俯身指向屏幕，女研究者抬头看他", "end_state": "两人对视，停顿", "duration_s": 7, "camera": "双人中景固定机位"}
+  ],
+  "model_prompts": [
+    {"shot_id": "sh-01", "platform": "agnostic", "prompt": "现代办公室，短发女研究者看着屏幕笑起来，又突然停止敲击键盘，笑容逐渐变为犹豫；中近景缓慢推近，保持角色外貌与桌面方向。"},
+    {"shot_id": "sh-02", "platform": "agnostic", "prompt": "同一个办公室，两名角色保持既有服装，同事从右侧俯身指向屏幕，女研究者抬头，两人对视停顿；固定双人中景。"}
+  ],
+  "qa_log": [{"stage": "P4", "target_id": "b-03", "issue_type": "story_incomplete", "severity": "minor", "status": "demo_only", "note": "本示范只展示片段，正式项目还需要完整结尾、更多镜头和制作测试。"}],
+  "production": {"status": "not_started"}
+}
